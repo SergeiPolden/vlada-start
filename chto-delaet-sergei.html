@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-title" content="claude 🧡">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" href="apple-touch-icon.png">
-<title>Что Сергей делает с Claude</title>
+<title>Что Сергей делает с Claude — и чем он поможет тебе</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-text-size-adjust: 100%; }
   html, body { overflow-x: hidden; }
@@ -17,21 +17,33 @@
   .wrap { background: #faf5ee; max-width: 600px; margin: 0 auto; min-height: 100vh;
     padding: calc(14px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) calc(56px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left)); }
   .back { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: #b5663f; font-size: 16px; font-weight: 600; margin-bottom: 12px; }
-  h1 { font-size: 28px; line-height: 1.2; letter-spacing: -0.4px; }
-  h2 { font-size: 20px; margin: 0; letter-spacing: -0.3px; }
+  h1 { font-size: 27px; line-height: 1.2; letter-spacing: -0.4px; }
+  h2.sec { font-size: 23px; margin: 30px 2px 6px; letter-spacing: -0.3px; }
+  h3 { font-size: 18px; margin: 0; }
   p { font-size: 17px; }
-  .hero { background: linear-gradient(135deg, #f3ddcb 0%, #e9d4c0 100%); border-radius: 22px; padding: 30px 22px; text-align: center; margin-bottom: 14px; }
+  .hero { background: linear-gradient(135deg, #f3ddcb 0%, #e9d4c0 100%); border-radius: 22px; padding: 30px 22px; text-align: center; margin-bottom: 8px; }
   .hero .emoji { font-size: 44px; display: block; margin-bottom: 8px; }
   .hero p { font-size: 17px; color: #6b5a49; margin-top: 10px; }
-  .intro { font-size: 17px; color: #45403a; margin: 16px 2px 4px; }
+  .intro { font-size: 17px; color: #45403a; margin: 14px 2px 2px; }
   .item { background: #fff; border-radius: 18px; padding: 18px 19px; box-shadow: 0 2px 12px rgba(120,90,60,0.07); margin-top: 13px; display: flex; gap: 14px; align-items: flex-start; }
   .item .ic { font-size: 28px; flex: 0 0 auto; }
-  .item h2 { margin-bottom: 4px; }
+  .item h3 { margin-bottom: 4px; }
   .item p { font-size: 15.5px; color: #6b6259; }
-  .soft { background: #fff; border-radius: 16px; padding: 20px 22px; margin-top: 18px; box-shadow: 0 2px 12px rgba(120,90,60,0.07); }
-  .soft .analogy { background: #faf3ec; border-radius: 12px; padding: 13px 15px; margin-top: 10px; font-size: 15.5px; color: #6b5a49; }
+  .divider { text-align: center; margin: 30px 0 4px; color: #c19a82; font-size: 15px; letter-spacing: .5px; }
+  .you { background: #fff; border-radius: 18px; padding: 18px 19px; box-shadow: 0 2px 12px rgba(120,90,60,0.07); margin-top: 13px; }
+  .you .top { display: flex; align-items: center; gap: 12px; }
+  .you .ic { font-size: 27px; flex: 0 0 auto; }
+  .you .desc { font-size: 15.5px; color: #6b6259; margin: 7px 0 0; }
+  .you .note { font-size: 13.5px; color: #a78d6f; margin-top: 6px; font-style: italic; }
+  .phrase { margin-top: 11px; background: #faf3ec; border: 1.5px solid #efe2d2; border-radius: 13px; padding: 12px 14px; font-size: 15.5px; color: #3c352e; cursor: pointer; position: relative; transition: background .12s, transform .08s; }
+  .phrase:active { transform: scale(0.99); }
+  .phrase .copy { float: right; font-size: 12px; color: #c19a82; margin-left: 10px; }
+  .phrase.copied { background: #eaf2e7; border-color: #bcd3b4; }
+  .phrase.copied .copy { color: #5a8050; }
+  .soft { background: #fff; border-radius: 16px; padding: 18px 20px; margin-top: 16px; box-shadow: 0 2px 12px rgba(120,90,60,0.07); }
+  .soft .analogy { background: #faf3ec; border-radius: 12px; padding: 13px 15px; margin-top: 10px; font-size: 15px; color: #6b5a49; }
   .calm { background: #e7efe4; border-left: 6px solid #7e9b7a; border-radius: 15px; padding: 22px; margin-top: 24px; }
-  .calm h2 { color: #4f6b4a; font-size: 20px; margin-bottom: 10px; } .calm p { color: #44513f; }
+  .calm h3 { color: #4f6b4a; font-size: 20px; margin-bottom: 10px; } .calm p { color: #44513f; }
   .end { text-align: center; margin-top: 32px; color: #8a7d6e; font-size: 16px; }
   .end .big { font-size: 20px; color: #b5663f; font-weight: 600; display: block; margin-bottom: 6px; }
   .homebtn { display: block; text-align: center; margin-top: 24px; text-decoration: none; color: #b5663f; font-weight: 600; font-size: 16px; }
@@ -44,37 +56,91 @@
 
   <div class="hero">
     <span class="emoji">🛠️</span>
-    <h1>Что Сергей делает с Claude</h1>
-    <p>Чтобы было понятно, на что эта штука способна — и совсем не страшно.</p>
+    <h1>Что Сергей делает с Claude<br>— и чем он поможет тебе</h1>
+    <p>Сначала живые примеры, а потом — как то же самое пригодится в твоей жизни.</p>
   </div>
 
-  <p class="intro">У Сергея Claude — это уже целая «мастерская помощников». Вот несколько живых примеров:</p>
+  <h2 class="sec">Что делает Сергей</h2>
+  <p class="intro">У него Claude — уже целая «мастерская помощников»:</p>
 
-  <div class="item"><span class="ic">🎬</span><div><h2>Помогает с работой — трейлерами к играм</h2><p>Разобрать сценарий, придумать ход, причесать текст, собрать понятные гайды для команды.</p></div></div>
+  <div class="item"><span class="ic">🎬</span><div><h3>Работа — трейлеры к играм</h3><p>Сергей с командой делает трейлеры к играм в издательстве «Полдень». Claude помогает разобрать сценарий по полочкам, придумать структуру рассказа, причесать тексты и собрать понятные гайды — чтобы вся команда работала по одному стандарту, а не наугад.</p></div></div>
 
-  <div class="item"><span class="ic">🤖</span><div><h2>Личный помощник в телефоне</h2><p>Сергей сделал себе бота: пишет ему мысли на ходу, тот напоминает о делах, отвечает на вопросы, достаёт нужные файлы.</p></div></div>
+  <div class="item"><span class="ic">🤖</span><div><h3>Личный помощник в телефоне</h3><p>Он собрал себе помощника: на ходу надиктовывает или пишет мысли — тот их сохраняет, напоминает о делах в нужное время, отвечает на вопросы и даже достаёт нужные файлы и материалы.</p></div></div>
 
-  <div class="item"><span class="ic">📚</span><div><h2>Порядок в книгах и заметках</h2><p>У него огромная библиотека. Claude помог всё разложить — теперь можно спросить «что у меня есть про…» и сразу найти.</p></div></div>
+  <div class="item"><span class="ic">📚</span><div><h3>Порядок в книгах и знаниях</h3><p>У Сергея огромная библиотека книг, заметок и материалов, собранных за годы. Claude помог всё разложить и связать — теперь можно просто спросить «что у меня есть про…» и за секунду найти нужное среди тысяч страниц.</p></div></div>
 
-  <div class="item"><span class="ic">🎙️</span><div><h2>Голос вместо клавиатуры</h2><p>Часто он не печатает, а наговаривает — Claude превращает речь в текст и в задачи.</p></div></div>
+  <div class="item"><span class="ic">🎙️</span><div><h3>Голос вместо клавиатуры</h3><p>Часто он вообще не печатает — наговаривает голосом, а Claude превращает речь в аккуратный текст, задачи и заметки. Удобно, когда руки заняты или мыслей много.</p></div></div>
 
   <div class="soft">
-    <p>Всё это — та самая «рабочая» версия Claude (помнишь, «код»): помощнику дают доступ к файлам и программам, и он мастерит.</p>
-    <div class="analogy">🔑 Простой Claude — переписка с помощником. «Код» — это когда помощника пускают в мастерскую с инструментами.</div>
+    <p>Всё это — та самая «рабочая» версия Claude (помнишь, «код»): помощнику дают доступ к файлам и программам, и он мастерит сам.</p>
+    <div class="analogy">🔑 Простой Claude — переписка с помощником. «Код» — когда помощника пускают в мастерскую с инструментами. Тебе для старта нужен только первый, простой.</div>
+  </div>
+
+  <div class="divider">• • •</div>
+
+  <h2 class="sec">А чем он поможет тебе</h2>
+  <p class="intro">Тот же помощник — только под твою жизнь. Нажми на фразу, чтобы скопировать, и вставь в Claude.</p>
+
+  <div class="you">
+    <div class="top"><span class="ic">👨‍👩‍👧</span><h3>Семья</h3></div>
+    <p class="desc">Спланировать поездку к родным или праздник, не забыть важные даты, написать тёплое поздравление или письмо.</p>
+    <div class="phrase">Помоги спланировать семейный праздник. Расскажу повод и кто будет — а ты предложи план и что не забыть.<span class="copy">копировать</span></div>
+  </div>
+
+  <div class="you">
+    <div class="top"><span class="ic">🏠</span><h3>Быт и дом</h3></div>
+    <p class="desc">Список покупок, меню на неделю, разобраться с инструкцией к технике, расписать домашние дела.</p>
+    <div class="phrase">Составь список покупок на неделю под наше меню — я расскажу, что обычно готовим.<span class="copy">копировать</span></div>
+  </div>
+
+  <div class="you">
+    <div class="top"><span class="ic">🩺</span><h3>Здоровье и медицина</h3></div>
+    <p class="desc">Объяснить простыми словами непонятное заключение врача, собрать вопросы перед приёмом, вести заметки по самочувствию.</p>
+    <div class="phrase">Объясни простыми словами, что написано в заключении врача, и помоги составить список вопросов к приёму.<span class="copy">копировать</span></div>
+    <p class="note">Claude не заменяет врача — он помогает понять и подготовиться.</p>
+  </div>
+
+  <div class="you">
+    <div class="top"><span class="ic">🧒</span><h3>Дети</h3></div>
+    <p class="desc">Придумать занятия и игры, объяснить ребёнку сложное простыми словами, сочинить сказку на ночь, собраться к садику и кружкам.</p>
+    <div class="phrase">Придумай 5 простых и интересных занятий с ребёнком 5 лет на вечер дома.<span class="copy">копировать</span></div>
+  </div>
+
+  <div class="you">
+    <div class="top"><span class="ic">💰</span><h3>Финансы</h3></div>
+    <p class="desc">Посчитать семейный бюджет, разобраться с платежами и тарифами, спланировать накопления на цель.</p>
+    <div class="phrase">Помоги составить простой семейный бюджет на месяц — я расскажу доходы и основные траты, а ты разложи.<span class="copy">копировать</span></div>
   </div>
 
   <div class="calm">
-    <h2>🌿 Тебе всё это не нужно сразу</h2>
-    <p>Ты начинаешь с простого — с разговора. Но однажды и твой Claude сможет стать таким же помощником под твои дела — например, помогать с твоими свечами, текстами и идеями. Шаг за шагом.</p>
+    <h3>🌿 Это лишь начало</h3>
+    <p>Это только примеры — на самом деле помочь можно почти с чем угодно из твоего дня. Начни с одной области, которая ближе всего сейчас. Остальное подтянется само.</p>
   </div>
 
   <div class="end">
-    <span class="big">Это не про технику. Это про помощь.</span>
+    <span class="big">Это не про технику. Это про помощь в обычной жизни.</span>
     А с какой стороны подойти — Сергей всегда подскажет. 💛
   </div>
 
   <a class="homebtn" href="index.html">← вернуться на главную</a>
 
 </div>
+
+<script>
+  document.querySelectorAll('.phrase').forEach(function(el){
+    el.addEventListener('click', function(){
+      var txt = el.childNodes[0].textContent.trim();
+      var done = function(){
+        el.classList.add('copied');
+        var c = el.querySelector('.copy'); var old = c.textContent;
+        c.textContent = 'скопировано ✓';
+        setTimeout(function(){ el.classList.remove('copied'); c.textContent = old; }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(txt).then(done).catch(done);
+      } else { done(); }
+    });
+  });
+</script>
 </body>
 </html>
