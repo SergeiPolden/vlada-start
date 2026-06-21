@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f1e6d8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="claude 🧡">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="apple-touch-icon.png">
+<title>Если застряла</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-text-size-adjust: 100%; }
+  html, body { overflow-x: hidden; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #322d28; background: #f1e6d8; line-height: 1.62; -webkit-font-smoothing: antialiased; font-size: 17px; }
+  .wrap { background: #faf5ee; max-width: 600px; margin: 0 auto; min-height: 100vh;
+    padding: calc(14px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) calc(56px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left)); }
+  .back { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: #b5663f; font-size: 16px; font-weight: 600; margin-bottom: 12px; }
+  h1 { font-size: 28px; line-height: 1.2; letter-spacing: -0.4px; }
+  h2 { font-size: 20px; margin: 0 0 6px; }
+  p { font-size: 17px; }
+  .hero { background: linear-gradient(135deg, #f3ddcb 0%, #e9d4c0 100%); border-radius: 22px; padding: 30px 22px; text-align: center; margin-bottom: 14px; }
+  .hero .emoji { font-size: 46px; display: block; margin-bottom: 8px; }
+  .hero p { font-size: 18px; color: #6b5a49; margin-top: 10px; }
+  .block { background: #fff; border-radius: 18px; padding: 20px; box-shadow: 0 2px 12px rgba(120,90,60,0.07); margin-top: 14px; }
+  .block .h { display: flex; align-items: center; gap: 11px; margin-bottom: 8px; }
+  .block .ic { font-size: 26px; }
+  .block ul { margin: 6px 0 0; padding-left: 20px; }
+  .block li { font-size: 15.5px; color: #5f574e; margin: 6px 0; }
+  .phrase { margin-top: 11px; background: #faf3ec; border: 1.5px solid #efe2d2; border-radius: 13px; padding: 12px 14px; font-size: 15.5px; color: #3c352e; cursor: pointer; position: relative; transition: background .12s, transform .08s; }
+  .phrase:active { transform: scale(0.99); }
+  .phrase .copy { float: right; font-size: 12px; color: #c19a82; margin-left: 10px; }
+  .phrase.copied { background: #eaf2e7; border-color: #bcd3b4; }
+  .phrase.copied .copy { color: #5a8050; }
+  .calm { background: #e7efe4; border-left: 6px solid #7e9b7a; border-radius: 15px; padding: 22px; margin-top: 18px; }
+  .calm h2 { color: #4f6b4a; } .calm p { color: #44513f; }
+  .end { text-align: center; margin-top: 32px; color: #8a7d6e; font-size: 16px; }
+  .end .big { font-size: 20px; color: #b5663f; font-weight: 600; display: block; margin-bottom: 6px; }
+  .homebtn { display: block; text-align: center; margin-top: 24px; text-decoration: none; color: #b5663f; font-weight: 600; font-size: 16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">← на главную</a>
+
+  <div class="hero">
+    <span class="emoji">🤍</span>
+    <h1>Если что-то непонятно<br>или застряла</h1>
+    <p>Спокойно. Это нормально, и из любого тупика есть простой выход.</p>
+  </div>
+
+  <div class="block">
+    <div class="h"><span class="ic">🙂</span><h2>Если не поняла ответ</h2></div>
+    <p style="font-size:15.5px;color:#6b6259;">Просто скажи об этом своими словами — Claude переделает:</p>
+    <ul>
+      <li>«объясни попроще» / «как для ребёнка»;</li>
+      <li>«покороче» или «по шагам»;</li>
+      <li>«я не это имела в виду…»;</li>
+      <li>«можно пример?»</li>
+    </ul>
+    <div class="phrase">Объясни, пожалуйста, попроще и по шагам — я не совсем поняла.<span class="copy">копировать</span></div>
+  </div>
+
+  <div class="block">
+    <div class="h"><span class="ic">🧭</span><h2>Если не знаешь, как попросить</h2></div>
+    <p style="font-size:15.5px;color:#6b6259;">Можно спросить самого Claude — он подскажет, как к нему обратиться.</p>
+    <div class="phrase">Я хочу, чтобы ты помог мне с… но не знаю, как правильно попросить. Подскажи, как мне сформулировать?<span class="copy">копировать</span></div>
+  </div>
+
+  <div class="block">
+    <div class="h"><span class="ic">😮‍💨</span><h2>Если совсем запуталась</h2></div>
+    <p style="font-size:15.5px;color:#6b6259;">Напиши как есть — честно и своими словами. Этого достаточно.</p>
+    <div class="phrase">Я запуталась и не знаю, с чего начать. Давай медленно и по порядку — помоги мне.<span class="copy">копировать</span></div>
+  </div>
+
+  <div class="block">
+    <div class="h"><span class="ic">🔒</span><h2>Это твоё и приватно</h2></div>
+    <ul>
+      <li>Это <b>твой личный</b> аккаунт и твои разговоры — пиши спокойно и честно.</li>
+      <li>Старые чаты <b>сохраняются</b> — можно вернуться к любому и продолжить.</li>
+      <li>Хочешь новую тему — просто начни <b>новый чат</b> (кнопка с плюсом).</li>
+    </ul>
+  </div>
+
+  <div class="calm">
+    <h2>🌿 Главное помни</h2>
+    <p>Нет глупых вопросов. Ничего нельзя сломать. А если что — рядом <b>Сергей</b>, всегда можно спросить его. Ты не одна в этом. 💛</p>
+  </div>
+
+  <div class="end">
+    <span class="big">Застрять — это нормально.</span>
+    Выход всегда в одном предложении. 💛
+  </div>
+
+  <a class="homebtn" href="index.html">← вернуться на главную</a>
+</div>
+<script>
+  document.querySelectorAll('.phrase').forEach(function(el){
+    el.addEventListener('click', function(){
+      var txt = el.childNodes[0].textContent.trim();
+      var done = function(){ el.classList.add('copied'); var c=el.querySelector('.copy'); var o=c.textContent; c.textContent='скопировано ✓'; setTimeout(function(){el.classList.remove('copied');c.textContent=o;},1600); };
+      if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(txt).then(done).catch(done); } else { done(); }
+    });
+  });
+</script>
+</body>
+</html>

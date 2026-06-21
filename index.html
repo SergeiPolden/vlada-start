@@ -7,44 +7,33 @@
 <meta name="theme-color" content="#f1e6d8">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Claude 💛">
+<meta name="apple-mobile-web-app-title" content="claude 🧡">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" href="apple-touch-icon.png">
 <title>Claude для Влады</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-text-size-adjust: 100%; }
   html, body { overflow-x: hidden; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    color: #322d28; background: #f1e6d8; line-height: 1.6;
-    -webkit-font-smoothing: antialiased; font-size: 17px;
-  }
-  .wrap {
-    background: #faf5ee; max-width: 600px; margin: 0 auto; min-height: 100vh;
-    padding: calc(20px + env(safe-area-inset-top)) calc(18px + env(safe-area-inset-right))
-             calc(40px + env(safe-area-inset-bottom)) calc(18px + env(safe-area-inset-left));
-  }
-  .hero { background: linear-gradient(135deg, #f3ddcb 0%, #e9d4c0 100%); border-radius: 24px; padding: 36px 24px; text-align: center; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #322d28; background: #f1e6d8; line-height: 1.6; -webkit-font-smoothing: antialiased; font-size: 17px; }
+  .wrap { background: #faf5ee; max-width: 600px; margin: 0 auto; min-height: 100vh;
+    padding: calc(20px + env(safe-area-inset-top)) calc(18px + env(safe-area-inset-right)) calc(40px + env(safe-area-inset-bottom)) calc(18px + env(safe-area-inset-left)); }
+  .hero { background: linear-gradient(135deg, #f3ddcb 0%, #e9d4c0 100%); border-radius: 24px; padding: 34px 24px; text-align: center; }
   .hero .emoji { font-size: 50px; display: block; margin-bottom: 8px; }
   .hero h1 { font-size: 30px; letter-spacing: -0.4px; }
   .hero p { font-size: 18px; color: #6b5a49; margin-top: 10px; }
-  .list { margin-top: 22px; display: flex; flex-direction: column; gap: 13px; }
-  a.tile {
-    display: flex; align-items: center; gap: 15px; text-decoration: none; color: inherit;
-    background: #fff; border-radius: 18px; padding: 18px 20px;
-    box-shadow: 0 2px 13px rgba(120,90,60,0.08); transition: transform .08s ease;
-  }
+  .group { margin-top: 26px; }
+  .group > .label { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #b59a82; margin: 0 4px 10px; font-weight: 600; }
+  .list { display: flex; flex-direction: column; gap: 11px; }
+  a.tile { display: flex; align-items: center; gap: 15px; text-decoration: none; color: inherit; background: #fff; border-radius: 18px; padding: 16px 18px; box-shadow: 0 2px 13px rgba(120,90,60,0.08); transition: transform .08s ease; }
   a.tile:active { transform: scale(0.985); }
-  .tile .ic { font-size: 30px; flex: 0 0 auto; }
+  .tile .ic { font-size: 28px; flex: 0 0 auto; }
   .tile .tx { flex: 1; }
-  .tile .tx h2 { font-size: 18px; margin: 0 0 2px; }
-  .tile .tx p { font-size: 14.5px; color: #8a7d6e; }
+  .tile .tx h2 { font-size: 17px; margin: 0 0 2px; }
+  .tile .tx p { font-size: 14px; color: #8a7d6e; }
   .tile .arrow { color: #c77b57; font-size: 22px; flex: 0 0 auto; }
-  .tile.soon { opacity: 0.6; box-shadow: 0 1px 6px rgba(120,90,60,0.05); }
-  .tile.soon .badge { font-size: 12px; background: #ece2d4; color: #9a8a76; border-radius: 20px; padding: 3px 9px; }
   .hint { margin-top: 26px; background: #e7efe4; border-radius: 16px; padding: 18px 20px; color: #44513f; font-size: 15.5px; }
   .hint b { color: #4f6b4a; }
-  .foot { text-align: center; margin-top: 28px; color: #a2937f; font-size: 15px; }
+  .foot { text-align: center; margin-top: 26px; color: #a2937f; font-size: 15px; }
 </style>
 </head>
 <body>
@@ -56,30 +45,30 @@
     <p>Твой помощник — простыми словами. Открывай по порядку, спешить не надо.</p>
   </div>
 
-  <div class="list">
-    <a class="tile" href="chto-takoe-claude.html">
-      <span class="ic">💬</span>
-      <span class="tx"><h2>Что такое Claude</h2><p>С чего всё начинается — простыми словами</p></span>
-      <span class="arrow">→</span>
-    </a>
+  <div class="group">
+    <div class="label">С чего начать</div>
+    <div class="list">
+      <a class="tile" href="chto-takoe-claude.html"><span class="ic">💬</span><span class="tx"><h2>Что такое Claude</h2><p>С чего всё начинается — простыми словами</p></span><span class="arrow">→</span></a>
+      <a class="tile" href="kak-nachat.html"><span class="ic">🧭</span><span class="tx"><h2>Как начать</h2><p>Твой первый разговор — по шагам</p></span><span class="arrow">→</span></a>
+      <a class="tile" href="pervaya-nedelya.html"><span class="ic">🗓️</span><span class="tx"><h2>Первая неделя</h2><p>По одному маленькому делу в день</p></span><span class="arrow">→</span></a>
+    </div>
+  </div>
 
-    <a class="tile" href="kak-nachat.html">
-      <span class="ic">🧭</span>
-      <span class="tx"><h2>Как начать</h2><p>Твой первый разговор — по шагам</p></span>
-      <span class="arrow">→</span>
-    </a>
+  <div class="group">
+    <div class="label">Как пользоваться</div>
+    <div class="list">
+      <a class="tile" href="golos-i-foto.html"><span class="ic">🎙️</span><span class="tx"><h2>Говори и показывай</h2><p>Голосом и по фото — не обязательно печатать</p></span><span class="arrow">→</span></a>
+      <a class="tile" href="pervye-dela.html"><span class="ic">✨</span><span class="tx"><h2>Твои первые дела</h2><p>Что попробовать в первый день</p></span><span class="arrow">→</span></a>
+      <a class="tile" href="chem-pomozhet-tebe.html"><span class="ic">💝</span><span class="tx"><h2>Чем Claude поможет тебе</h2><p>Семья · дети · быт · здоровье · финансы</p></span><span class="arrow">→</span></a>
+    </div>
+  </div>
 
-    <a class="tile" href="pervye-dela.html">
-      <span class="ic">✨</span>
-      <span class="tx"><h2>Твои первые дела</h2><p>Что попробовать в первый день</p></span>
-      <span class="arrow">→</span>
-    </a>
-
-    <a class="tile" href="chto-delaet-sergei.html">
-      <span class="ic">🛠️</span>
-      <span class="tx"><h2>Что Сергей делает с Claude</h2><p>Живые примеры — и чем он поможет тебе</p></span>
-      <span class="arrow">→</span>
-    </a>
+  <div class="group">
+    <div class="label">Если что</div>
+    <div class="list">
+      <a class="tile" href="chto-delaet-sergei.html"><span class="ic">🛠️</span><span class="tx"><h2>Что Сергей делает с Claude</h2><p>Живые примеры — на что это способно</p></span><span class="arrow">→</span></a>
+      <a class="tile" href="esli-zastryala.html"><span class="ic">🤍</span><span class="tx"><h2>Если застряла</h2><p>Что делать, когда непонятно. И что это приватно</p></span><span class="arrow">→</span></a>
+    </div>
   </div>
 
   <div class="hint">

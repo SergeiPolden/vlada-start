@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f1e6d8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="claude 🧡">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="apple-touch-icon.png">
+<title>Чем Claude поможет тебе</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-text-size-adjust: 100%; }
+  html, body { overflow-x: hidden; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #322d28; background: #f1e6d8; line-height: 1.62; -webkit-font-smoothing: antialiased; font-size: 17px; }
+  .wrap { background: #faf5ee; max-width: 600px; margin: 0 auto; min-height: 100vh;
+    padding: calc(14px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) calc(56px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left)); }
+  .back { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: #b5663f; font-size: 16px; font-weight: 600; margin-bottom: 12px; }
+  h1 { font-size: 28px; line-height: 1.2; letter-spacing: -0.4px; }
+  h3 { font-size: 18px; margin: 0; }
+  p { font-size: 17px; }
+  .hero { background: linear-gradient(135deg, #f3ddcb 0%, #e9d4c0 100%); border-radius: 22px; padding: 30px 22px; text-align: center; margin-bottom: 12px; }
+  .hero .emoji { font-size: 46px; display: block; margin-bottom: 8px; }
+  .hero p { font-size: 17px; color: #6b5a49; margin-top: 10px; }
+  .intro { font-size: 17px; color: #45403a; margin: 14px 2px 2px; }
+  .you { background: #fff; border-radius: 18px; padding: 18px 19px; box-shadow: 0 2px 12px rgba(120,90,60,0.07); margin-top: 14px; }
+  .you .top { display: flex; align-items: center; gap: 12px; }
+  .you .ic { font-size: 27px; flex: 0 0 auto; }
+  .you .desc { font-size: 15.5px; color: #6b6259; margin: 8px 0 0; }
+  .you ul { margin: 9px 0 0; padding-left: 20px; }
+  .you li { font-size: 15px; color: #5f574e; margin: 4px 0; }
+  .you .note { font-size: 13.5px; color: #a78d6f; margin-top: 8px; font-style: italic; }
+  .phrase { margin-top: 10px; background: #faf3ec; border: 1.5px solid #efe2d2; border-radius: 13px; padding: 12px 14px; font-size: 15.5px; color: #3c352e; cursor: pointer; position: relative; transition: background .12s, transform .08s; }
+  .phrase:active { transform: scale(0.99); }
+  .phrase .copy { float: right; font-size: 12px; color: #c19a82; margin-left: 10px; }
+  .phrase.copied { background: #eaf2e7; border-color: #bcd3b4; }
+  .phrase.copied .copy { color: #5a8050; }
+  .calm { background: #e7efe4; border-left: 6px solid #7e9b7a; border-radius: 15px; padding: 22px; margin-top: 24px; }
+  .calm h3 { color: #4f6b4a; font-size: 20px; margin-bottom: 10px; } .calm p { color: #44513f; }
+  .end { text-align: center; margin-top: 32px; color: #8a7d6e; font-size: 16px; }
+  .end .big { font-size: 20px; color: #b5663f; font-weight: 600; display: block; margin-bottom: 6px; }
+  .homebtn { display: block; text-align: center; margin-top: 24px; text-decoration: none; color: #b5663f; font-weight: 600; font-size: 16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">← на главную</a>
+
+  <div class="hero">
+    <span class="emoji">💝</span>
+    <h1>Чем Claude поможет тебе</h1>
+    <p>Помощник под твою жизнь. В каждой области — что попросить и готовая фраза.</p>
+  </div>
+
+  <p class="intro">Нажми на фразу, чтобы скопировать, и вставь её в Claude. Дальше просто рассказывай своими словами.</p>
+
+  <div class="you">
+    <div class="top"><span class="ic">👨‍👩‍👧</span><h3>Семья</h3></div>
+    <p class="desc">Чтобы важное не терялось и оставалось тепло, а не суета.</p>
+    <ul>
+      <li>спланировать поездку к родным или семейный праздник — по шагам и со списком, что не забыть;</li>
+      <li>собрать список важных дат (дни рождения, годовщины) и напоминать заранее;</li>
+      <li>придумать, как провести выходной всей семьёй.</li>
+    </ul>
+    <div class="phrase">Составь список важных семейных дат, которые нельзя забывать, и подскажи, за сколько дней лучше напомнить о каждой.<span class="copy">копировать</span></div>
+  </div>
+
+  <div class="you">
+    <div class="top"><span class="ic">🧒</span><h3>Дети</h3></div>
+    <p class="desc">Помощник под рукой каждый день — от игр до сложных детских вопросов.</p>
+    <ul>
+      <li>придумать занятия и игры по возрасту — дома, в дорогу, на дождливый вечер;</li>
+      <li>объяснить ребёнку сложное простыми словами («почему идёт дождь», «откуда радуга»);</li>
+      <li>сочинить добрую сказку на ночь — с именем дочки и её любимыми героями;</li>
+      <li>собрать чек-лист к садику/кружкам и спокойный режим дня;</li>
+      <li>идеи поделок и творчества вместе с ребёнком;</li>
+      <li>подсказать, как мягко поговорить о страхах или капризах.</li>
+    </ul>
+    <div class="phrase">Придумай 5 простых и интересных занятий с ребёнком 5 лет на вечер дома, без подготовки.<span class="copy">копировать</span></div>
+    <div class="phrase">Сочини добрую короткую сказку на ночь для девочки 5 лет. Я скажу имя и что она любит.<span class="copy">копировать</span></div>
+    <p class="note">В тонких вопросах о ребёнке Claude — поддержка и идеи, но не замена врача или психолога.</p>
+  </div>
+
+  <div class="you">
+    <div class="top"><span class="ic">🏠</span><h3>Быт и дом</h3></div>
+    <p class="desc">Чтобы рутина не давила и решалась быстрее.</p>
+    <ul>
+      <li>меню на неделю — с учётом, что любят и что не едят;</li>
+      <li>список покупок под это меню (и ничего не забыть);</li>
+      <li>что приготовить из того, что уже есть в холодильнике;</li>
+      <li>разобраться с инструкцией к технике (стиралка, духовка, водоподготовка) — по шагам;</li>
+      <li>расписать домашние дела и уборку по дням, чтобы не всё сразу;</li>
+      <li>собрать чек-лист в поездку или на дачу.</li>
+    </ul>
+    <div class="phrase">Составь меню на неделю и список покупок к нему. Я расскажу, что мы любим и что не едим.<span class="copy">копировать</span></div>
+    <div class="phrase">Помоги разобраться с инструкцией к технике — объясни по шагам, простыми словами. Сейчас пришлю текст или фото.<span class="copy">копировать</span></div>
+  </div>
+
+  <div class="you">
+    <div class="top"><span class="ic">🩺</span><h3>Здоровье</h3></div>
+    <p class="desc">Чтобы понимать, что происходит, и спокойно держать всё под контролем.</p>
+    <ul>
+      <li>объяснить простыми словами непонятное заключение врача или анализы;</li>
+      <li>собрать список вопросов перед приёмом — чтобы ничего не забыть спросить;</li>
+      <li>разобраться, что значит назначение и как принимать (по инструкции);</li>
+      <li>вести дневник самочувствия — что и когда записывать;</li>
+      <li>подготовиться к обследованию: что взять, как себя вести;</li>
+      <li>в тревожный момент — спокойно подышать вместе, простые техники успокоиться.</li>
+    </ul>
+    <div class="phrase">Объясни простыми словами, что написано в заключении врача, и помоги составить список вопросов к приёму. Сейчас пришлю текст.<span class="copy">копировать</span></div>
+    <p class="note">Claude помогает понять и подготовиться, но не заменяет врача и не ставит диагнозы.</p>
+  </div>
+
+  <div class="you">
+    <div class="top"><span class="ic">💰</span><h3>Финансы</h3></div>
+    <p class="desc">Чтобы с деньгами было спокойно и понятно, без лишней тревоги.</p>
+    <ul>
+      <li>составить простой семейный бюджет на месяц;</li>
+      <li>разобраться с квитанциями, платежами и тарифами — нормально ли это;</li>
+      <li>спланировать накопления на цель (отпуск, крупная покупка);</li>
+      <li>сравнить варианты (тарифы, подписки) и выбрать выгодный;</li>
+      <li>собрать список регулярных трат и подписок, чтобы держать в поле зрения.</li>
+    </ul>
+    <div class="phrase">Помоги составить простой семейный бюджет на месяц — я расскажу доходы и основные траты, а ты разложи по полочкам.<span class="copy">копировать</span></div>
+    <div class="phrase">Разбери эту квитанцию (тариф) простыми словами и скажи, всё ли выглядит нормально. Сейчас пришлю.<span class="copy">копировать</span></div>
+  </div>
+
+  <div class="calm">
+    <h3>🌿 Это лишь начало</h3>
+    <p>Это только примеры — на самом деле помочь можно почти с чем угодно из твоего дня. Начни с одной области, которая ближе всего сейчас. Остальное подтянется само.</p>
+  </div>
+
+  <div class="end">
+    <span class="big">Выбери одну область — и попробуй.</span>
+    Остальное подождёт. 💛
+  </div>
+
+  <a class="homebtn" href="index.html">← вернуться на главную</a>
+</div>
+<script>
+  document.querySelectorAll('.phrase').forEach(function(el){
+    el.addEventListener('click', function(){
+      var txt = el.childNodes[0].textContent.trim();
+      var done = function(){ el.classList.add('copied'); var c=el.querySelector('.copy'); var o=c.textContent; c.textContent='скопировано ✓'; setTimeout(function(){el.classList.remove('copied');c.textContent=o;},1600); };
+      if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(txt).then(done).catch(done); } else { done(); }
+    });
+  });
+</script>
+</body>
+</html>
